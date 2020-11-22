@@ -1,0 +1,12 @@
+{
+  "name": "humake_new_app",
+  "displayName": "humake_new_app",
+  "expo": {
+    "name": "humake_new_app",
+    "slug": "humake_new_app",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
