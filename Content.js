@@ -104,13 +104,13 @@ const styles= StyleSheet.create({
     menuTitle: {
         textAlign: 'center',
         fontSize: 16,
-        fontWeight: 700
+        fontWeight: '700',
     },
 
     menuSubTitle: {
         textAlign: 'center',
         fontSize: 16,
-        fontWeight: 400,
+        fontWeight: '400',
         color: '#ff8d1d'
     }    
 });
