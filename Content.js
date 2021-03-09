@@ -9,11 +9,11 @@ class Content extends React.Component {
 
     render() {
         return (
-            <View>
-                <View style={[styles.section,styles.top]}>
+            <View style={styles.section_l}>
+                <View style={styles.top}>
                     <Image source={require('./res/img_header_logo.png')} style={styles.logo} />
                 </View>
-                <View style={styles.section}>
+                <View>
                     <Text>센터 소개</Text>
                 </View>
                 <View style={styles.section}>
@@ -23,27 +23,27 @@ class Content extends React.Component {
                         <Text style={styles.menuSubTitle}>없음</Text>
                     </View>
                     <View style={styles.menu}>
-                        <Image />                        
+                        <Image source={require('./res/attendance.png')} style={styles.menu_image} />                      
                         <Text style={styles.menuTitle}>출석</Text>
                         <Text style={styles.menuSubTitle}>0일-0회</Text>
                     </View>
                     <View style={styles.menu}>
-                        <Image />
+                        <Image source={require('./res/exercise.png')} style={styles.menu_image} />
                         <Text style={styles.menuTitle}>운동</Text>
                     </View>              
                 </View>
                 <View style={styles.section}>
                     <View style={styles.menu}>
-                        <Image />
+                        <Image source={require('./res/weight.png')} style={styles.menu_image} />
                         <Text style={styles.menuTitle}>체중기록</Text>
                         <Text style={styles.menuSubTitle}>0.0Kg</Text>
                     </View>
                     <View style={styles.menu}>
-                        <Image />
+                        <Image source={require('./res/suggestions.png')} style={styles.menu_image} />
                         <Text style={styles.menuTitle}>알림</Text>
                     </View>
                     <View style={styles.menu}>
-                        <Image />
+                        <Image source={require('./res/reservation.png')} style={styles.menu_image} />
                         <Text style={styles.menuTitle}>PT예약,확인</Text>
                     </View>                    
                 </View>
@@ -53,6 +53,12 @@ class Content extends React.Component {
 }
 
 const styles= StyleSheet.create({
+    section_l: {
+        flex : 1,
+        display: 'flex',
+        flexWrap: 'wrap'
+    },
+
     section: {
       flex: 1,
       flexDirection : 'row',
@@ -61,8 +67,8 @@ const styles= StyleSheet.create({
 
     top: {
         backgroundColor: '#333',
-        paddingTop:20,
-        paddingBottom:10,
+        paddingTop: 30,
+        paddingBottom: 15,
         shadowColor: '#000',
         shadowOffset: { width: 1, height: 3 },
         shadowOpacity:  0.4,
@@ -70,17 +76,23 @@ const styles= StyleSheet.create({
         elevation: 5,
     },
 
-    logo : {
-        marginLeft:15,
-        width:230,
-        height:28   
+    logo: {
+        marginLeft: 15,
+        width: 230,
+        height: 28   
     },
 
     menu: {
         flex: 1,
-        flexWrap:'wrap',
+        flexWrap: 'wrap',
         flexDirection : 'column',
-        marginBottom:10
+        marginBottom: 10,
+        alignContent: 'center'
+    },
+
+    menu_image: {
+        width: 60,
+        height: 60
     },
 
     menu1: {
